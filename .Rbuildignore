@@ -7,7 +7,7 @@
 ^webpack\.config\.js$
 ^tsconfig\.json$
 ^node_modules$
-^src$
+^ts$
 ^example\.html$
 ^inst/htmlwidgets/lib/langevitour-pack\.js\.map$
 ^notes.*$

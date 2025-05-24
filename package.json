@@ -1,6 +1,6 @@
 {
   "name": "langevitour",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "An HTML widget that randomly tours 2D projections of numerical data.",
   "type": "module",
   "main": "lib/langevitour.js",
@@ -10,7 +10,7 @@
     "sync-versions": "VERSION=$(grep '^Version:' DESCRIPTION | cut -d' ' -f2) && sed 's/^  \\\"version\\\":.*/  \\\"version\\\": \\\"'$VERSION'\\\",/' package.json >package.json.new && mv package.json.new package.json && sed 's/^   version:.*/   version: \\\"'$VERSION'\\\"/' inst/htmlwidgets/langevitour.yaml >inst/htmlwidgets/langevitour.yaml.new && mv inst/htmlwidgets/langevitour.yaml.new inst/htmlwidgets/langevitour.yaml && hatch version $VERSION",
     "js-build": "npx tsc && npx webpack",
     "js-build-quick": "npx tsc && npx webpack --mode=development",
-    "js-docs": "npx typedoc src/langevitour.ts --out docs/jsdoc/ --excludeNotDocumented --readme none",
+    "js-docs": "npx typedoc ts/langevitour.ts --out docs/jsdoc/ --excludeNotDocumented --readme none",
     "r-document": "Rscript -e 'devtools::document()'",
     "r-docs": "npm run r-document && Rscript -e 'pkgdown::build_site()'",
     "py-build": "cp inst/htmlwidgets/lib/langevitour-pack.js py/langevitour/static/langevitour-pack.js && hatch build",
