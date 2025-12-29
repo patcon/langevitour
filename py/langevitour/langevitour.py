@@ -1,4 +1,5 @@
 import json
+import textwrap
 
 import numpy as np
 import pkg_resources
@@ -239,7 +240,7 @@ class Langevitour:
             tour_{unique_id}.renderValue({data_json});
         </script>
         """
-        return html
+        return textwrap.dedent(html).strip()
 
 
     def _repr_html_(self):
